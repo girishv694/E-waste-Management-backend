@@ -1,0 +1,26 @@
+{
+  "name": "E-waste-Management-backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/girishv694/E-waste-Management-backend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/girishv694/E-waste-Management-backend/issues"
+  },
+  "homepage": "https://github.com/girishv694/E-waste-Management-backend#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^6.0.12",
+    "nodemon": "^2.0.14"
+  }
+}
