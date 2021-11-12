@@ -118,15 +118,15 @@ router.post("/signin",(req,res) => {
                })
                const {_id,username,email} = user;
 
-               res.cookie("jwttoken",token,{
-                   expires : new Date(Date.now() +  258920000),
-                   httpOnly:true
-               }).send(token);
+            //    res.cookie("jwttoken",token,{
+            //        expires : new Date(Date.now() +  258920000),
+            //        httpOnly:true
+            //    }).send(token);
 
        
-            //    return res.json({status:'ok',user :{_id,username,email} ,token}).header('auth-token',token).cookie("jwt",token, {
-            //        expires :new Date(Date.now() + 259892000);
-            //    });
+               return res.json({status:'ok',user :{_id,username,email} ,token}).header('auth-token',token)
+                  
+            
                
                console.log(token)
             
