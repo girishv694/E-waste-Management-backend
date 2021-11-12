@@ -22,9 +22,16 @@
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "express": "^4.17.1",
+    "is-empty": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.0.12",
+<<<<<<< HEAD
     "multer": "^1.4.3",
     "nodemon": "^2.0.14"
+=======
+    "nodemon": "^2.0.14",
+    "slugify": "^1.6.2",
+    "validator": "^13.7.0"
+>>>>>>> 4446a8e3149581eae9c154785444c885b416fe48
   }
 }
