@@ -26,6 +26,7 @@ router.post("/register", (req, res) => {
     }else if(!Validator.isEmail(req.body.email)){
         res.status(400).json({message: "Invalid Email"});
     }
+    
 
 
 //Password checks
@@ -46,7 +47,8 @@ if(!Validator.isLength(req.body.password,{min:6,max:30})){
             const newUser = new User({
                 username:req.body.username,
                 password:req.body.password,
-                email:req.body.email
+                email:req.body.email,
+                phone:req.body.phone
             });
 
             // Hash password before storing in database
