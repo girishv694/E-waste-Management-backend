@@ -44,7 +44,7 @@ app.use("/user",user)
 app.use('/api',login)
 app.use('/products', productController)
 app.use('/category',category)
-app.use('/ac',ac);
+// app.use('/ac',ac);
 
 
 
