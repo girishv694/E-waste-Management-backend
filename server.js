@@ -7,7 +7,7 @@ const app = express();
 const user = require('./controllers/user.controller')
 const cors = require('cors')
 const category = require('./controllers/Category.controller')
-
+const appointment= require('./controllers/Appointment.controller')
 
 
 app.use(express.json());
@@ -15,7 +15,7 @@ app.use(cors())
 
 app.use("/user",user)
 app.use('/products', productController)
-
+app.use('/appointment',appointment)
 
 
 
