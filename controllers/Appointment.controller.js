@@ -3,9 +3,9 @@ const express =require('express')
 const router= express.Router()
 const appointment=require('../models/Appointment.model')
 
-router.get("",async(req,res)=>{
+router.get("/:id",async(req,res)=>{
 
-    let r=await appointment.find()
+    let r=await appointment.findById(req.params.id)
 
    return res.send(r)
 
