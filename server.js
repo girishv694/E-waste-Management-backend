@@ -13,7 +13,7 @@ app.use(express.json());
 
 app.use(cors())
 
-app.use('/api',login)
+// app.use('/api',login)
 app.use('/products', productController)
 app.use('/category',category)
 app.use('/ac',ac);
