@@ -16,7 +16,7 @@ app.use(cors())
 app.use("/user",user)
 app.use('/products', productController)
 app.use('/appointment',appointment)
-
+app.use('/category',category)
 
 
 app.listen(3002, async() =>{

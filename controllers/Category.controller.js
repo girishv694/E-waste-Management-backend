@@ -1,28 +1,26 @@
 const express = require('express')
-const Category =require('../models/Category');
-const slugify = require('slugify')
+const Category =require('../models/category.model')
+
 
 const router = express.Router();
 
-router.post('/create',(req,res)=>{
+router.post('',async(req,res)=>{
 
-    const categoryObj = {
-        name : req.body.name,
-        slug : slugify(req.body.name)
-    }
+    let r= await Category.create(req.body)
 
-    if(req.body.parentId){
-        categoryObj.parentId = req.body.parentId;
-    }
+    return res.send(r)
+})
 
-    const cat = new Category(categoryObj);
-    cat.save((error, category)=>{
-        if(error) return res.status(400).json({error})
-        if(category){
-            return res.json({category})
-        }
-    })
+router.get('',async(req,res)=>{
 
+    let r= await Category.find({})
+    return res.send(r)
+})
+
+router.get("/:name",async(req,res)=>{
+    let r= await Category.find({name:req.params.name})
+    
+    return res.send(r)
 })
 
 module.exports = router;
